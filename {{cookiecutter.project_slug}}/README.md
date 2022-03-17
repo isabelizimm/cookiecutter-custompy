@@ -1,11 +1,15 @@
-{{ cookiecutter.project_name }}
+{% set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}
+# {{ cookiecutter.project_name }}
 
-<!-- badges: start -->
-
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![codecov](https://codecov.io/gh/isabelizimm/vetiver-python/branch/main/graph/badge.svg?token=CW6JHVS6ZX)](https://codecov.io/gh/isabelizimm/vetiver-python)
-
-<!-- badges: end -->{% for _ in cookiecutter.project_name %}={% endfor %}
+{% if is_open_source %}
+<p align="center">
+<a href="https://pypi.python.org/pypi/{{ cookiecutter.project_slug }}">
+    <img src="https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg"
+        alt = "Release Status">
+</a>
+{% endif %}
+<a href="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions">
+    <img src="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/main.yml/badge.svg?branch=release" alt="CI Status">
 
 
 {{ cookiecutter.project_short_description }}
