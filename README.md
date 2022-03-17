@@ -5,6 +5,11 @@
 To use a cookiecutter template
 
 # Contents
+## General
+- Code of conduct
+- History
+- README.md
+- python .gitignore
 
 ## Dependency Tracking
 
@@ -13,7 +18,6 @@ To use a cookiecutter template
 ## GitHub Actions
 ### `tests.yml`
 - run tests on Ubuntu:latest
-- 
 
 ### `docs.yml`
 - checks to see if Sphinx docs build
