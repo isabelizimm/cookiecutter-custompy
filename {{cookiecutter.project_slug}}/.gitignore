@@ -98,8 +98,8 @@ ENV/
 # mkdocs documentation
 /site
 
-# mypy
-.mypy_cache/
+# pytest
+.pytest_cache/
 
 # IDE settings
 .vscode/
