@@ -14,12 +14,18 @@ To use a cookiecutter template, first [install cookiecutter](https://cookiecutte
 - python .gitignore
 
 ## Dependency Tracking
+- requirements/requirements_dev.txt
 
 ## Setup
+- setup.py
+- setup.cfg
+- pyproject.toml
 
 ## GitHub Actions
 ### `tests.yml`
 - run tests on Ubuntu:latest
+- Python versions 3.7-3.10
+- codecov
 
 ### `docs.yml`
 - checks to see if Sphinx docs build
@@ -27,7 +33,7 @@ To use a cookiecutter template, first [install cookiecutter](https://cookiecutte
 ## GitHub issue templates
 - Bug report
 - Feature request
-- Release checklist (custom)
+- Release checklist
 
 ## Pre-commit hooks
 - check-yaml, end-of-file-fixer, trailing whitespace
