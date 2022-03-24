@@ -9,9 +9,14 @@ assignees: ''
 
 Prepare for release:
 
+- [ ] `git pull`
+- [ ] Polish [HISTORY](../../HISTORY.rst)
 - [ ] `pre-commit run`
-- [ ] `pytest {{cookiecutter.project_slug}}/tests` 
-- [ ] bump release number
+- [ ] `pytest` 
+- [ ] `bumpversion minor` or `bumpversion major`
+- [ ] `python -m build`
 
 Submit to PyPI:
-- [ ] submit 🎉
+
+- [ ] `python -m twine upload dist/*`
+- [ ] Submit 🎉
