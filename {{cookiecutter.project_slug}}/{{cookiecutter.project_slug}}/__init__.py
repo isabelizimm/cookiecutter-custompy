@@ -2,4 +2,11 @@
 
 __author__ = """{{ cookiecutter.full_name }}"""
 __email__ = '{{ cookiecutter.email }}'
-__version__ = '{{ cookiecutter.version }}'
+
+from importlib.metadata import version as _v
+
+# Set version -----------------------------------------------------------------
+
+__version__ = _v("{{ cookiecutter.version }}")
+
+del _v

@@ -1,7 +1,4 @@
-{% set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}
 # {{ cookiecutter.project_name }}
-
-{% if is_open_source %}
 
 <a href="https://pypi.python.org/pypi/{{ cookiecutter.project_slug }}">
     <img src="https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg"
