@@ -27,6 +27,6 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: isabelizimm/making-cookies
-          publish_branch: your-branch
+          publish_branch: dev-branch
           publish_dir: ./my_new_package
           exclude_assets: ''
