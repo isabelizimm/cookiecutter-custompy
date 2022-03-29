@@ -1,0 +1,31 @@
+# Creates cookie cutter and pushes to new repo
+
+name: Generate Cookiecutter
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - name: Install req
+        run: pip install cookiecutter
+      - name: Make cookiecutter
+        run: cookiecutter --no-input .
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: isabelizimm/making-cookies
+          publish_branch: your-branch
+          publish_dir: ./my_new_package
