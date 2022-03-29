@@ -29,3 +29,4 @@ jobs:
           external_repository: isabelizimm/making-cookies
           publish_branch: your-branch
           publish_dir: ./my_new_package
+          exclude_assets: ''
