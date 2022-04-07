@@ -22,9 +22,14 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements/requirements_dev.txt
           python -m pip install -e .
-      - uses: ammaraskar/sphinx-action@master
+      - name: Build docs
+        run: |
+          make docs
+      - name: Save docs artifact
+        uses: actions/upload-artifact@v3
         with:
-          docs-folder: "docs/"
+          name: docs-html
+          path: docs/_build/html/
       - uses: actions/upload-artifact@v1
         with:
           name: DocumentationHTML
