@@ -9,3 +9,5 @@ Sphinx==4.3.0
 twine==1.14.0
 pytest==6.2.4
 black==21.7b0
+sphinx-autodoc-typehints==1.17.0
+sphinx-book-theme==0.3.2
