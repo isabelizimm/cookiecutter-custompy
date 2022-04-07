@@ -138,7 +138,6 @@ latex_documents = [
      '{{ cookiecutter.full_name }}', 'manual'),
 ]
 
-
 # -- Options for manual page output ------------------------------------
 
 # One entry per manual page. List of tuples

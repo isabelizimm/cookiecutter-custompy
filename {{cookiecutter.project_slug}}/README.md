@@ -1,4 +1,4 @@
-# {{ cookiecutter.project_name }}
+# Python package
 
 <a href="https://pypi.python.org/pypi/{{ cookiecutter.project_slug }}">
     <img src="https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg"
@@ -9,11 +9,9 @@
     <img src="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/tests.yml/badge.svg?branch=release" alt="CI Status">
 </a>
 
-{{ cookiecutter.project_short_description }}
-
 
 # Features
 
 # Credits
 
-This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter).
+This package was created with [Cookiecutter](https://github.com/isabelizimm/cookiecutter-custompy).

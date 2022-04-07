@@ -1,4 +1,4 @@
-name: "Docs Check"
+name: "build and deploy docs"
 
 on:
   workflow_dispatch:
@@ -9,10 +9,28 @@ on:
     types: [published]
 
 jobs:
-  docs:
+  tests:
+    name: "Tests"
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: ammaraskar/sphinx-action@master
-      with:
-        docs-folder: "docs/"
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .[dev]
+      - uses: ammaraskar/sphinx-action@master
+        with:
+          docs-folder: "docs/"
+      - uses: actions/upload-artifact@v1
+        with:
+          name: DocumentationHTML
+          path: docs/_build/html/
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/*
+          publish_branch: gh-pages
