@@ -20,7 +20,7 @@
 import os
 import sys
 
-import {{ cookiecutter.project_slug }}
+import ..{{ cookiecutter.project_slug }}
 
 # -- General configuration ---------------------------------------------
 
